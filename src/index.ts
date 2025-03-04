@@ -8,13 +8,6 @@ const plugin: ESLint.Plugin = {
   rules: {
     'must-enum-const': createEnumRule(),
   },
-  configs: {
-    recommended: {
-      rules: {
-        'must-enum-const': 'error',
-      },
-    },
-  },
 }
 
 export default plugin

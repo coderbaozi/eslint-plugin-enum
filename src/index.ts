@@ -1,18 +1,17 @@
+import { ESLint } from 'eslint'
 import { createEnumRule } from './rules'
-import { EslintPluginConfig } from './types'
 
-const plugin: EslintPluginConfig = {
+const plugin: ESLint.Plugin = {
   meta: {
     name: 'enum-const',
   },
   rules: {
-    'enum-const': createEnumRule(),
+    'must-enum-const': createEnumRule(),
   },
   configs: {
     recommended: {
-      plugins: ['enum'],
       rules: {
-        'enum/enum-const': 'error',
+        'must-enum-const': 'error',
       },
     },
   },

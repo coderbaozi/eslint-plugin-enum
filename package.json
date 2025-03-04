@@ -1,0 +1,56 @@
+{
+  "name": "eslint-plugin-enum",
+  "version": "0.0.1",
+  "description": "eslint plugin for enum const!",
+  "type": "module",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/coderbaozi/eslint-plugin-enum#readme",
+  "bugs": "https://github.com/coderbaozi/eslint-plugin-enum/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderbaozi/eslint-plugin-enum.git"
+  },
+  "author": "coderbaozi",
+  "funding": "https://github.com/sponsors/coderbaozi",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build -w",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@coderbaozi/eslint-config": "^0.0.7",
+    "@rslib/core": "^0.5.3",
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/parser": "^8.26.0",
+    "bumpp": "^10.0.2",
+    "eslint": "^9.20.0",
+    "lint-staged": "^15.4.3",
+    "pnpm": "^10.2.1",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

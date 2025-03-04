@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-enum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint plugin for enum const!",
   "type": "module",
   "keywords": [],
